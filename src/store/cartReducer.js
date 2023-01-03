@@ -1,12 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
-const cartinitial = {show:false,items:[],totalQnty:0}
+const cartinitial = {items:[],totalQnty:0}
 const cartSlice = createSlice({
     name:'cart',
     initialState:cartinitial,
     reducers:{
-        showHide(state){
-            state.show = !state.show;
-        },
         addItemTocart(state,action){
             const item = action.payload;
             state.totalQnty++;
